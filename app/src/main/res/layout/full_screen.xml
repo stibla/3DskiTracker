@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <com.stibla.threedskitracker.OpenGLView
+                android:id="@+id/openGLView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/button_fullScreen_motion_rotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#000000"
+                android:contentDescription="@string/motion_rotation"
+                android:scaleType="center"
+                android:src="@drawable/motion" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rangeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/SCROLLER_track_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="35"
+        android:fillViewport="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelselectedTrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/selected_track"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#0000FF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelStartPoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_point"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_startPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/distance"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_Distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelDescent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/descent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_Descent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+            
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelBluePiste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/blue_piste"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#0000FF"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_BluePiste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#0000FF"
+                android:textStyle="bold" />
+            
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelRedPiste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/red_piste"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FF0000"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_RedPiste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FF0000"
+                android:textStyle="bold" />
+            
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelBlackPiste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/black_piste"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_BlackPiste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelAscent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ascent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_Ascent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelMaxSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/max_speed"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_MaxSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelAvgSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/avg_speed"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_AvgSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelMaxAlt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/max_altitude"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_MaxAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+            
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelMinAlt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/min_altitude"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_MinAlt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+            
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelStartTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_StartTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/duration"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_Duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+            
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelMovingTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/moving_time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_MovingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+ 			<Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelMovingTimeDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/movint_time_desc"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_MovingTimeDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+             <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelRestTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rest_time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_RestTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelVerticalDescent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vertical_descent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_VerticalDescent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelVerticalAscent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vertical_ascent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_VerticalAscent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+            
+            <Space
+                android:layout_width="1dp"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_labelSlope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/slope"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_fullScreen_Slope"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditTextPreference
+        android:key="minTimeLocationManager"
+        android:summary="Time interval between location updates in seconds"
+        android:title="GPS update time"
+        android:inputType="number"
+        android:defaultValue="1" />
+    
+    <EditTextPreference
+        android:key="altitudeOffset"
+        android:summary="Altitude offset correction in meters"
+        android:title="Altitude offset"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:defaultValue="-45" />
+
+</PreferenceScreen>

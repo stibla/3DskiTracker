@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">3DskiTracker</string>
+    <string name="menu_settings">Settings</string>
+    <string name="distance">DISTANCE</string>
+    <string name="avg_speed">AVG SPEED DESC</string>
+    <string name="max_speed">MAX SPEED DESC</string>
+    <string name="global_stats">GLOBAL STATS</string>
+    <string name="runs">RUNS</string>
+    <string name="descent">DESCENT</string>
+    <string name="my_runs">MY RUNS</string>
+    <string name="current_run">CURRENT RUN</string>
+    <string name="speed">SPEED</string>
+    <string name="ascent">ASCENT</string>
+    <string name="duration">DURATION</string>
+    <string name="moving_time">MOVING TIME</string>
+    <string name="rest_time">REST TIME</string>
+    <string name="analysis">ANALYSIS</string>
+    <string name="full_screen">FULL SCREEN</string>
+    <string name="motion_rotation">MOTION_ROTATION</string>
+    <string name="menu_clear_db">Clear DB</string>
+    <string name="map">map</string>
+    <string name="max_altitude">MAX ALTITUDE</string>
+    <string name="min_altitude">MIN ALTITUDE</string>
+    <string name="vertical">VERTICAL</string>
+    <string name="slope_per">SLOPE PER</string>
+    <string name="slope_deg">SLOPE DEG</string>
+    <string name="selected_track">SELECTED TRACK</string>
+    <string name="start_point">START POINT</string>
+    <string name="start_time">START TIME</string>
+    <string name="vertical_descent">VERTICAL DESCENT</string>
+    <string name="slope">SLOPE</string>
+    <string name="vertical_ascent">VERTICAL ASCENT</string>
+    <string name="movint_time_desc">MOVING TIME DESC</string>
+    <string name="blue_piste">BLUE PISTE</string>
+    <string name="red_piste">RED PISTE</string>
+    <string name="black_piste">BLACK PISTE</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
