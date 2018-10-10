@@ -1,4 +1,4 @@
 # 3DskiTracker
-3d ski tracker
+3D ski tracker
 
 ![](https://github.com/stibla/3DskiTracker/blob/master/Screenshot.png)
