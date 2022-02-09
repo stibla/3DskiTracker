@@ -14,8 +14,8 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.content.LocalBroadcastManager;
+import androidx.core.app.NotificationCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 public class ServiceGPS extends Service implements LocationListener {
 
@@ -97,7 +97,7 @@ public class ServiceGPS extends Service implements LocationListener {
             prevAlt = Double.longBitsToDouble(prefs.getLong("com.stibla.threedskitracker.ServiceGPS.prevAlt", 0));
             prevLat = Double.longBitsToDouble(prefs.getLong("com.stibla.threedskitracker.ServiceGPS.prevLat", 0));
             prevLon = Double.longBitsToDouble(prefs.getLong("com.stibla.threedskitracker.ServiceGPS.prevLon", 0));
-            ActivityMain.minTimeLocationManager = Long.valueOf(PreferenceManager.getDefaultSharedPreferences(this).getString("minTimeLocationManager", "1"));
+            ActivityMain.minTimeLocationManager = Long.parseLong(PreferenceManager.getDefaultSharedPreferences(this).getString("minTimeLocationManager", "1"));
         }
 
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, ActivityMain.minTimeLocationManager * 1000, 0, this);
